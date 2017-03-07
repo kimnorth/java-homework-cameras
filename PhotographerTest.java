@@ -36,6 +36,12 @@ public class PhotographerTest {
 
   // Test removing a camera from ArrayList
 
+  @Test
+  public void hadCameraBeenRemoved() {
+    photographer.addCamera(holga);
+    photographer.removeCamera(holga);
+    assertEquals(0, photographer.countCameras() );
+  }
 
   // Test printCamera against expected string
 
