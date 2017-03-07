@@ -8,10 +8,12 @@ public class PhotographerTest {
   // Test that arrayList exists
 
   Photographer photographer;
+  Camera holga;
 
   @Before
   public void before(){
     photographer = new Photographer("Steve");
+    holga = new Camera();
   }
 
   @Test
@@ -26,6 +28,11 @@ public class PhotographerTest {
 
   // Test adding a camera to ArrayList
 
+  @Test
+  public void hasCameraBeenAdded() {
+    photographer.addCamera(holga);
+    assertEquals( 1, photographer.countCameras() );
+  }
 
   // Test removing a camera from ArrayList
 

@@ -2,11 +2,11 @@ import java.util.ArrayList;
 
 public class Photographer {
 
-  private ArrayList cameras;
+  private ArrayList<Camera> cameras;
   private String name;
 
     public Photographer(String name) {
-      this.cameras = new ArrayList();
+      this.cameras = new ArrayList<Camera>();
       this.name = name;
     }
 
@@ -16,6 +16,10 @@ public class Photographer {
 
     public int countCameras() {
       return this.cameras.size();
+    }
+
+    public void addCamera(Camera camera) {
+      cameras.add(camera);
     }
 
 }
