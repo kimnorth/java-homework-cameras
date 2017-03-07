@@ -19,6 +19,11 @@ public class PhotographerTest {
     assertEquals( "Steve", photographer.getName() );
   }
 
+  @Test
+  public void countArrayLength(){
+    assertEquals( 0, photographer.countCameras() );
+  }
+
   // Test adding a camera to ArrayList
 
 

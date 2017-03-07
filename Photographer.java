@@ -6,12 +6,16 @@ public class Photographer {
   private String name;
 
     public Photographer(String name) {
-      // this.cameras = new ArrayList();
+      this.cameras = new ArrayList();
       this.name = name;
     }
 
     public String getName() {
       return this.name;
+    }
+
+    public int countCameras() {
+      return this.cameras.size();
     }
 
 }
