@@ -2,11 +2,11 @@ import java.util.ArrayList;
 
 public class Photographer {
 
-  private ArrayList<Camera> cameras;
+  private ArrayList<CameraDetails> cameras;
   private String name;
 
     public Photographer(String name) {
-      this.cameras = new ArrayList<Camera>();
+      this.cameras = new ArrayList<CameraDetails>();
       this.name = name;
     }
 
@@ -18,12 +18,23 @@ public class Photographer {
       return this.cameras.size();
     }
 
-    public void addCamera(Camera camera) {
+    public void addCamera(CameraDetails camera) {
       cameras.add(camera);
     }
 
     public void removeCamera(Camera camera) {
       cameras.remove(camera);
+    }
+
+    public String printCameras() {
+
+      for (CameraDetails camera : cameras) {
+        camera.printDetails();
+      }
+
+      return "Hello!";
+      
+      // NOT WORKING!!!
     }
 
 }

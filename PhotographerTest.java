@@ -9,6 +9,7 @@ public class PhotographerTest {
 
   Photographer photographer;
   Camera holga;
+  DigitalCamera canonT4i;
 
   @Before
   public void before(){
@@ -45,6 +46,12 @@ public class PhotographerTest {
 
   // Test printCamera against expected string
 
+  @Test
+  public void printingCameraDetails() {
+    photographer.addCamera(canonT4i);
+    // System.out.println(canonT4i.details);
+    assertEquals( "Hello!", photographer.printCameras() );
+  }
 
   //
 
